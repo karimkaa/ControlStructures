@@ -1,0 +1,22 @@
+#include <iostream>
+#include <clocale>
+using namespace std;
+int main() 
+{
+    setlocale(LC_ALL, "");
+    int a, b;
+
+    cout << "Введите значение для переменной a: ";
+    cin >> a;
+
+    cout << "Введите значение для переменной b: ";
+    cin >> b;
+
+    cout << "Начальные числа: a = " << a << ", b = " << b << endl;
+
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+
+    cout << "Результат: a = " << a << ", b = " << b << endl;
+}
